@@ -55,6 +55,7 @@
 				"consistent": true
 			}
 		],
+		"no-underscore-dangle": "off",
 		"vue/html-indent": [
 			"error",
 			"tab",
