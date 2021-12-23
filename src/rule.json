@@ -11,6 +11,9 @@
 		"parser": "babel-eslint",
 		"sourceType": "module"
 	},
+	"settings": {
+		"import/resolver": "webpack"
+	},
 	"plugins": [
 		"babel",
 		"import",
@@ -21,12 +24,7 @@
 		"global-require": "off",
 		"implicit-arrow-linebreak": "off",
 		"import/no-dynamic-require": "off",
-		"import/no-extraneous-dependencies": [
-			"error",
-			{
-				"devDependencies": true
-			}
-		],
+		"import/no-extraneous-dependencies": "off",
 		"indent": [
 			"error",
 			"tab"
