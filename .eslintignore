@@ -18,8 +18,11 @@ coverage*
 # nyc test coverage
 .nyc_output
 
+# Github directory
+.github
+
 # Dependency directories
-node_modules
+node_modules/
 
 # IDE / Editor
 .idea
