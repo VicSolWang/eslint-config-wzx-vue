@@ -7,9 +7,9 @@
 const getVueConfig = () => {
   let config = 'plugin:vue/recommended';
   try {
-    const Vue = require('vue').default;
-    const version = Number(Vue.version.split('.')[0]);
-    if (version === 3) {
+    const { version } = require('vue');
+    const majorVersion = Number(version.split('.')[0]);
+    if (majorVersion === 3) {
       config = 'plugin:vue/vue3-recommended';
     }
   } catch (err) {

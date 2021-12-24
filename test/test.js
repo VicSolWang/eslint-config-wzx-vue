@@ -12,7 +12,7 @@ const { ESLint } = require('eslint');
 const isObject = (obj) => typeof obj === 'object' && obj !== null;
 const isArray = (array) => Array.isArray(array);
 
-test('Test basic properties of config.', (t) => {
+test.serial('Test basic properties of config.', (t) => {
   const config = require('../index');
   t.true(
     isArray(config.extends) && config.extends.indexOf('airbnb-base') !== -1,
@@ -38,7 +38,23 @@ test('Test basic properties of config.', (t) => {
   }
 });
 
-test('Test the validity of the custom rule.', async (t) => {
+test.serial('Test the support of config for vue2 and vue3', async (t) => {
+  const vuePath = require.resolve('vue');
+  const configPath = require.resolve('../src/config');
+  const mainPath = require.resolve('../index');
+  // Config for vue3
+  let config = require('../index');
+  t.true(config.extends.indexOf('plugin:vue/vue3-recommended') !== -1);
+  // Config for vue2
+  delete require.cache[vuePath];
+  delete require.cache[configPath];
+  delete require.cache[mainPath];
+  await fs.remove(path.resolve(vuePath, '..'));
+  config = require('../index');
+  t.true(config.extends.indexOf('plugin:vue/recommended') !== -1);
+});
+
+test.serial('Test the validity of the custom rule.', async (t) => {
   const eslint = new ESLint();
   const results = await eslint.lintFiles(['test/example/rule.js']);
   const result = (results || [])[0] || {};
@@ -46,7 +62,7 @@ test('Test the validity of the custom rule.', async (t) => {
   t.is(result.errorCount, 0);
 });
 
-test('Test the support of Typescript eslint.', async (t) => {
+test.serial('Test the support of Typescript eslint.', async (t) => {
   const pluginPath = require.resolve('@typescript-eslint/eslint-plugin');
   const configPath = require.resolve('../src/config');
   // With Typescript plug
