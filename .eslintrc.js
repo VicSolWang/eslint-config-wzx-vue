@@ -1,9 +1,11 @@
 /**
- * Created by VicSolWang.
- * Date: 2020-06-12 8:35
+ * Created by VICSOLWANG.
+ * Date: 2020/06/12 8:35
  * Email: vic.sol.wang@gmail.com
  */
 
-const rule = require('./src/rule');
+const config = require('./src/config');
 
-module.exports = rule;
+config.rules['import/no-extraneous-dependencies'] = 'off';
+
+module.exports = config;
