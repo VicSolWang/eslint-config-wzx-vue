@@ -19,9 +19,22 @@ test.serial('Test basic properties of config.', (t) => {
   );
   t.true(isArray(config.plugins) && config.plugins.indexOf('vue') !== -1);
   t.true(isObject(config.rules));
-  if (config.parserOptions) {
-    t.true(isObject(config.parserOptions) && !!config.parserOptions.project);
-    t.true(config.extends.indexOf('airbnb-typescript/base') !== -1);
+  if (config.overrides && config.overrides.length > 0) {
+    const overrideConfig = config.overrides[0] || {};
+    t.true(
+      isArray(overrideConfig.extends) &&
+        overrideConfig.extends.indexOf('airbnb-base') !== -1 &&
+        overrideConfig.extends.indexOf('airbnb-typescript/base') !== -1,
+    );
+    t.true(
+      isObject(overrideConfig.parserOptions) &&
+        !!overrideConfig.parserOptions.project,
+    );
+    t.true(
+      isArray(overrideConfig.plugins) &&
+        overrideConfig.plugins.indexOf('vue') !== -1,
+    );
+    t.true(isObject(overrideConfig.rules));
   }
 });
 

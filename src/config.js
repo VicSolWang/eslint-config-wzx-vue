@@ -42,16 +42,19 @@ try {
   require('typescript');
   require('@typescript-eslint/parser');
   require('@typescript-eslint/eslint-plugin');
-  config.extends = [
-    'airbnb-base',
-    'airbnb-typescript/base',
-    vueConfig,
-    'prettier',
+  config.overrides = [
+    {
+      files: ['*.vue', '*.ts', '*.tsx'],
+      extends: ['airbnb-base', 'airbnb-typescript/base', vueConfig, 'prettier'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        project: './tsconfig.json',
+      },
+      plugins: ['vue'],
+      rules: customRules,
+    },
   ];
-  config.parserOptions = {
-    parser: '@typescript-eslint/parser',
-    project: './tsconfig.json',
-  };
 } catch (err) {
   console.info(
     'Note: Typescript eslint needs to install typescript, @typescript-eslint/parser, @typescript-eslint/eslint-plugin.',
