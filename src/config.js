@@ -7,9 +7,9 @@
 const getVueConfig = () => {
   let config = 'plugin:vue/recommended';
   try {
-    const Vue = require('vue').default;
-    const version = Number(Vue.version.split('.')[0]);
-    if (version === 3) {
+    const { version } = require('vue');
+    const majorVersion = Number(version.split('.')[0]);
+    if (majorVersion === 3) {
       config = 'plugin:vue/vue3-recommended';
     }
   } catch (err) {
@@ -44,7 +44,7 @@ try {
   require('@typescript-eslint/eslint-plugin');
   config.overrides = [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.vue', '*.ts', '*.tsx'],
       extends: ['airbnb-base', 'airbnb-typescript/base', vueConfig, 'prettier'],
       parser: 'vue-eslint-parser',
       parserOptions: {
