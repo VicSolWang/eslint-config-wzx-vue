@@ -1,3 +1,16 @@
+# [0.2.0](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.1.1...v0.2.0) (2021-12-27)
+
+
+### Bug Fixes
+
+* optimize extends config ([28c2333](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/28c2333fdb67e2b40f873675040c24a7974a8598))
+* solve the problem of overrides ([428768d](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/428768d8b791cff9f5563d2a4ab37fff89862341))
+
+
+### Features
+
+* add eslint-config-wzx and rewrite config based on wzx ([78973ac](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/78973ac08131f75ee0b5e9e3bb3863092aca3bd9))
+
 ## [0.1.1](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.1.0...v0.1.1) (2021-12-25)
 
 
