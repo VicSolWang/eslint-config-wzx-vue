@@ -4,6 +4,8 @@
  * Email: vic.sol.wang@gmail.com
  */
 
+const baseConfig = require('eslint-config-wzx');
+
 const getVueConfig = () => {
   let config = 'plugin:vue/recommended';
   try {
@@ -19,23 +21,20 @@ const getVueConfig = () => {
   }
   return config;
 };
-
 const vueConfig = getVueConfig();
 
-const customRules = {
-  'global-require': 'warn',
-  'import/no-dynamic-require': 'warn',
-  'no-bitwise': 'off',
-  'no-nested-ternary': 'off',
-  'no-script-url': 'warn',
-  'no-underscore-dangle': 'off',
+const handleExtendsConfig = (extendsConfig = []) => {
+  const result = [...extendsConfig];
+  result.splice(result.length - 1, 0, vueConfig);
+  return result;
 };
 
+const { overrides: defaultOverrides, ...defaultConfig } = baseConfig;
 const config = {
-  extends: ['airbnb-base', vueConfig, 'prettier'],
+  ...defaultConfig,
+  extends: handleExtendsConfig(defaultConfig.extends),
   parser: 'vue-eslint-parser',
   plugins: ['vue'],
-  rules: customRules,
 };
 
 try {
@@ -44,15 +43,15 @@ try {
   require('@typescript-eslint/eslint-plugin');
   config.overrides = [
     {
-      files: ['*.vue', '*.ts', '*.tsx'],
-      extends: ['airbnb-base', 'airbnb-typescript/base', vueConfig, 'prettier'],
+      ...defaultOverrides[0],
+      files: ['*.vue'].concat(defaultOverrides[0].files),
+      extends: handleExtendsConfig(defaultOverrides[0].extends),
       parser: 'vue-eslint-parser',
       parserOptions: {
+        ...defaultOverrides[0].parserOptions,
         parser: '@typescript-eslint/parser',
-        project: './tsconfig.json',
       },
       plugins: ['vue'],
-      rules: customRules,
     },
   ];
 } catch (err) {
