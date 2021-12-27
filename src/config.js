@@ -4,6 +4,8 @@
  * Email: vic.sol.wang@gmail.com
  */
 
+const baseConfig = require('eslint-config-wzx');
+
 const getVueConfig = () => {
   let config = 'plugin:vue/recommended';
   try {
@@ -22,39 +24,35 @@ const getVueConfig = () => {
 
 const vueConfig = getVueConfig();
 
-const customRules = {
-  'global-require': 'warn',
-  'import/no-dynamic-require': 'warn',
-  'no-bitwise': 'off',
-  'no-nested-ternary': 'off',
-  'no-script-url': 'warn',
-  'no-underscore-dangle': 'off',
-};
-
 const config = {
-  extends: ['airbnb-base', vueConfig, 'prettier'],
+  ...baseConfig,
   parser: 'vue-eslint-parser',
   plugins: ['vue'],
-  rules: customRules,
 };
+config.extends = [...config.extends];
+config.extends.splice(config.extends.length - 1, 0, vueConfig);
 
 try {
   require('typescript');
   require('@typescript-eslint/parser');
   require('@typescript-eslint/eslint-plugin');
-  config.overrides = [
-    {
-      files: ['*.vue', '*.ts', '*.tsx'],
-      extends: ['airbnb-base', 'airbnb-typescript/base', vueConfig, 'prettier'],
-      parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        project: './tsconfig.json',
-      },
-      plugins: ['vue'],
-      rules: customRules,
+  const overridesConfig = {
+    ...config.overrides[0],
+    files: ['*.vue'].concat(config.overrides[0].files),
+    parser: 'vue-eslint-parser',
+    parserOptions: {
+      ...config.overrides[0].parserOptions,
+      parser: '@typescript-eslint/parser',
     },
-  ];
+    plugins: ['vue'],
+  };
+  overridesConfig.extends = [...overridesConfig.extends];
+  overridesConfig.extends.splice(
+    overridesConfig.extends.length - 1,
+    0,
+    vueConfig,
+  );
+  config.overrides = [overridesConfig];
 } catch (err) {
   console.info(
     'Note: Typescript eslint needs to install typescript, @typescript-eslint/parser, @typescript-eslint/eslint-plugin.',
