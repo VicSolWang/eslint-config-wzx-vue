@@ -23,9 +23,9 @@ const getVueConfig = () => {
 };
 
 const vueConfig = getVueConfig();
-
+const { overrides: defaultOverrides, ...defaultConfig } = baseConfig;
 const config = {
-  ...baseConfig,
+  ...defaultConfig,
   parser: 'vue-eslint-parser',
   plugins: ['vue'],
 };
@@ -36,23 +36,19 @@ try {
   require('typescript');
   require('@typescript-eslint/parser');
   require('@typescript-eslint/eslint-plugin');
-  const overridesConfig = {
-    ...config.overrides[0],
-    files: ['*.vue'].concat(config.overrides[0].files),
+  const overrides = {
+    ...defaultOverrides[0],
+    files: ['*.vue'].concat(defaultOverrides[0].files),
     parser: 'vue-eslint-parser',
     parserOptions: {
-      ...config.overrides[0].parserOptions,
+      ...defaultOverrides[0].parserOptions,
       parser: '@typescript-eslint/parser',
     },
     plugins: ['vue'],
   };
-  overridesConfig.extends = [...overridesConfig.extends];
-  overridesConfig.extends.splice(
-    overridesConfig.extends.length - 1,
-    0,
-    vueConfig,
-  );
-  config.overrides = [overridesConfig];
+  overrides.extends = [...overrides.extends];
+  overrides.extends.splice(overrides.extends.length - 1, 0, vueConfig);
+  config.overrides = [overrides];
 } catch (err) {
   console.info(
     'Note: Typescript eslint needs to install typescript, @typescript-eslint/parser, @typescript-eslint/eslint-plugin.',
