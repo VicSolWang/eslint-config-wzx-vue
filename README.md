@@ -8,7 +8,7 @@
 [![codecov](https://img.shields.io/codecov/c/gh/VicSolWang/eslint-config-wzx-vue/master?label=codecov&logo=codecov&style=flat-square)](https://codecov.io/gh/VicSolWang/eslint-config-wzx-vue)
 [![NPM downloads](https://img.shields.io/npm/dt/eslint-config-wzx-vue?style=flat-square)](https://www.npmjs.com/package/eslint-config-wzx-vue)
 
-> The custom vue eslint rules based on [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base). (Support Typescript Eslint)
+> The custom vue eslint rules based on [eslint-config-wzx](https://www.npmjs.com/package/eslint-config-wzx). (Follow airbnb-base and Support Typescript Eslint)
 
 ## :cd: Installation
 
@@ -26,7 +26,7 @@ Add eslint-config-wzx-vue to the "extends" in your `.eslintrc.* file`.
       "extends": "wzx-vue"
     }
 
-:bulb: Typescript eslint needs `tsconfig.json` in your project root directory.
+:bulb: Typescript eslint needs `tsconfig.json` in your project root directory. And the config will select the rules of `vue2` or `vue3` according to the vue version installed in your project.
 
 ## :lock: License
 
