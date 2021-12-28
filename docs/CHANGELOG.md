@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.2.0...v0.2.1) (2021-12-28)
+
+
+### Bug Fixes
+
+* update README.md ([a8ee201](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/a8ee201691439d718cb49ef0c852871194ea99bf))
+
 # [0.2.0](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.1.1...v0.2.0) (2021-12-27)
 
 
