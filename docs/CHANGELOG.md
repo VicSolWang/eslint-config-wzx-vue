@@ -1,3 +1,10 @@
+## [0.2.3](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.2.2...v0.2.3) (2022-01-11)
+
+
+### Bug Fixes
+
+* modfiy overrides config ([de24a16](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/de24a16269a6166108a19d36ad0cfe74c0d035ad))
+
 ## [0.2.2](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.2.1...v0.2.2) (2021-12-30)
 
 
