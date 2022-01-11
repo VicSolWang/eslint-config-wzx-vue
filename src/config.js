@@ -50,6 +50,7 @@ try {
       parserOptions: {
         ...defaultOverrides[0].parserOptions,
         parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.vue'],
       },
       plugins: ['vue'],
     },
