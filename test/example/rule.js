@@ -7,6 +7,7 @@
 let a = 'eslint';
 
 // 'global-require': 'warn'
+// 'import/no-extraneous-dependencies': 'warn',
 if (a) {
   require('eslint');
 }
@@ -19,6 +20,11 @@ a = 1 & 2;
 
 // 'no-nested-ternary': 'off'
 a = a < 1 ? 0 : a < 2 ? 1 : 2;
+
+// 'no-param-reassign': 'warn',
+[].forEach((item) => {
+  item.a = 1;
+});
 
 // 'no-script-url': 'warn'
 a = 'javascript:void(0)';

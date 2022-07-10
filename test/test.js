@@ -58,7 +58,7 @@ test.serial('Test the validity of the custom rule.', async (t) => {
   const eslint = new ESLint();
   const results = await eslint.lintFiles(['test/example/rule.js']);
   const result = (results || [])[0] || {};
-  t.is(result.warningCount, 3);
+  t.is(result.warningCount, 5);
   t.is(result.errorCount, 0);
 });
 
