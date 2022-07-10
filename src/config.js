@@ -23,6 +23,12 @@ const getVueConfig = () => {
 };
 const vueConfig = getVueConfig();
 
+const customRules = {
+  'vue/multi-word-component-names': 'warn',
+  'vue/no-multiple-template-root': 'warn',
+  'vue/no-v-model-argument': 'off',
+};
+
 const handleExtendsConfig = (extendsConfig = []) => {
   const result = [...extendsConfig];
   result.splice(result.length - 1, 0, vueConfig);
@@ -35,6 +41,10 @@ const config = {
   extends: handleExtendsConfig(defaultConfig.extends),
   parser: 'vue-eslint-parser',
   plugins: ['vue'],
+  rules: {
+    ...defaultConfig.rules,
+    ...customRules,
+  },
 };
 
 try {
@@ -53,6 +63,10 @@ try {
         extraFileExtensions: ['.vue'],
       },
       plugins: ['vue'],
+      rules: {
+        ...defaultOverrides[0].rules,
+        ...customRules,
+      },
     },
   ];
 } catch (err) {
