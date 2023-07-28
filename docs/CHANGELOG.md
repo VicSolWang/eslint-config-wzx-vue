@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.4.0...v0.4.1) (2023-07-28)
+
+
+### Bug Fixes
+
+* reduce typescript version ([2398cb6](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/2398cb6ae3c8ae76e6695bc674ec55b5c51ab1da))
+
 # [0.4.0](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.3.0...v0.4.0) (2023-07-27)
 
 
