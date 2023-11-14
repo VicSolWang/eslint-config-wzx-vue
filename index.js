@@ -1,9 +1,9 @@
 /**
  * Created by VICSOLWANG.
- * Date: 2020/06/12 9:57
+ * Date: 2020/6/12 9:57
  * Email: vic.sol.wang@gmail.com
  */
 
-const config = require('./src/config');
+import config from './src/config.js';
 
-module.exports = config;
+export default config;
