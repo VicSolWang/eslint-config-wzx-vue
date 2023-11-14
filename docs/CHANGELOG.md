@@ -1,3 +1,25 @@
+# [0.5.0](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.4.1...v0.5.0) (2023-11-14)
+
+
+### Bug Fixes
+
+* modify test-release.yml to disable husky in CI ([37d280c](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/37d280c83a2e89fabfc21e9d2c20d5144d28fce8))
+
+
+### Features
+
+* add new test rule ([65e68bb](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/65e68bb7b7b97f919d61382d9623826f2790459b))
+* add new vue test file ([4c2b5a6](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/4c2b5a6d386b19ff64b07e7c2b9ad2f562bf20fa))
+* change the entry file to es module ([3316666](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/3316666cecb8aac20c7ec33eb7158722031ab1b6))
+* change the test file to es module and use new flat eSLint config to test ([86d5a02](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/86d5a02da6df03477c9f6300902d40435bcbea4d))
+* modify engines, scripts, version add attributes such as files and type to package.json ([a9e7e22](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/a9e7e22bf94f1ade421e1b352aa7b065fb1fab95))
+* update package.json ([215dfa7](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/215dfa7100544d4b560fab5e9dbf181f2450cad3))
+
+
+### Performance Improvements
+
+* use new eslint config ([ff6686c](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/ff6686c3b2530851160ba67b2f680af00507080d))
+
 ## [0.4.1](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.4.0...v0.4.1) (2023-07-28)
 
 
