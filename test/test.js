@@ -48,12 +48,12 @@ test('Test the validity of the custom rule.', async (t) => {
 test('Test the support of config for vue2 and vue3', async (t) => {
   if (FlatESLint) {
     const vuePath = require.resolve('vue');
-    // vue3
+    // Config for vue3
     const flatESLint1 = new FlatESLint();
     const { rules: rules1 = {} } =
       (await flatESLint1.calculateConfigForFile('index.js')) || {};
     t.true(!!rules1['vue/no-deprecated-data-object-declaration']);
-    // vue2
+    // Config for vue2
     await fs.remove(path.resolve(vuePath, '..'));
     const flatESLint2 = new FlatESLint({
       overrideConfigFile: 'src/config.js',
