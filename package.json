@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wzx-vue",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "The custom vue eslint rules based on eslint-config-wzx. (Follow airbnb-base and Support Typescript Eslint)",
   "main": "index.js",
   "files": [
