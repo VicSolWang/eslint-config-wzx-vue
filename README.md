@@ -20,11 +20,13 @@
 
 ## :rocket: Usage
 
-Add eslint-config-wzx-vue to the "extends" in your `.eslintrc.* file`.
+Starting from v5.x, we will use the new flat eslint config. Add eslint-config-wzx-vue in your `eslint.config.js`.
 
-    {
-      "extends": "wzx-vue"
-    }
+    import wzxVue from 'eslint-config-wzx-vue';
+
+    export default [
+      ...wzxVue,
+    ]
 
 :bulb: Typescript eslint needs `tsconfig.json` in your project root directory. And the config will select the rules of `vue2` or `vue3` according to the vue version installed in your project.
 
