@@ -7,13 +7,18 @@
 let a = 'eslint';
 
 // 'global-require': 'warn'
-// 'import/no-extraneous-dependencies': 'warn',
 if (a) {
   require('eslint');
 }
 
 // 'import/no-dynamic-require': 'warn'
 require(a);
+
+// 'import/no-extraneous-dependencies': 'warn'
+require('espree');
+
+// 'import/no-unresolved': 'warn',
+require('eslint-utils');
 
 // 'no-bitwise': 'off'
 a = 1 & 2;
