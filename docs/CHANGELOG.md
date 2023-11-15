@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.5.0...v0.5.1) (2023-11-15)
+
+
+### Bug Fixes
+
+* add overrides file type ([de72f5e](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/de72f5e3b1e4424f354e076eaf2c0d1053d6512b))
+
 # [0.5.0](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.4.1...v0.5.0) (2023-11-14)
 
 
