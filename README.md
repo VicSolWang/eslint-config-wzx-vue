@@ -20,7 +20,7 @@
 
 ## :rocket: Usage
 
-Starting from v5.x, we will use the new flat eslint config. Add eslint-config-wzx-vue in your `eslint.config.js`.
+Starting from v0.5.x, we will use the new flat eslint config. Add eslint-config-wzx-vue in your `eslint.config.js`.
 
     import wzxVue from 'eslint-config-wzx-vue';
 

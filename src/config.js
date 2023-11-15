@@ -68,7 +68,7 @@ try {
   await import('@typescript-eslint/parser');
   await import('@typescript-eslint/eslint-plugin');
   const overridesFilesTypes = {
-    files: ['*.vue', '*.ts', '*.tsx'],
+    files: ['*.ts', '*.tsx', '*.mts', '*.cts', '*.vue'],
   };
   const overridesFiles =
     compat.config({
