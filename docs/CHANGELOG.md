@@ -1,3 +1,20 @@
+# [0.6.0](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.5.1...v0.6.0) (2023-11-19)
+
+
+### Bug Fixes
+
+* update package.json ([46e59ef](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/46e59ef3d9628e83d58d8651f2d9b9e6871091c2))
+
+
+### Features
+
+* modify test ([ee00523](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/ee005235dd6efbb50a1c0f094ab58b12105225ab))
+
+
+### Performance Improvements
+
+* change the custom rules to be set based on the Vue version ([5c7d1c2](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/5c7d1c2b9ab6497b4c1a4be1779df8764abf3ddb))
+
 ## [0.5.1](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.5.0...v0.5.1) (2023-11-15)
 
 
