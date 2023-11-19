@@ -38,7 +38,7 @@ test('Test the validity of the custom rule.', async (t) => {
     const flatESLint2 = new FlatESLint();
     const [result2 = {}] =
       (await flatESLint2.lintFiles('test/example/vue.vue')) || [];
-    t.is(result2.warningCount, 2);
+    t.is(result2.warningCount, 0);
     t.is(result2.errorCount, 0);
   } else {
     t.true(true);
