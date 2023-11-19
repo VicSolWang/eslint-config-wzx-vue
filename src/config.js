@@ -119,9 +119,11 @@ const config = [
   {
     rules: {
       ...wzxCustomRules,
-      'vue/multi-word-component-names': 'warn',
-      'vue/no-multiple-template-root': 'warn',
-      'vue/no-v-model-argument': 'off',
+      'vue/multi-word-component-names': 'off',
+      'vue/no-multiple-template-root': vueConfig.includes('vue3')
+        ? 'off'
+        : 'error',
+      'vue/no-v-model-argument': vueConfig.includes('vue3') ? 'off' : 'error',
     },
   },
   ...wzxCustomLanguageOptions,
