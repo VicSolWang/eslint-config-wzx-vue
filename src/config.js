@@ -18,7 +18,7 @@ const compat = new FlatCompat({
 const getVueConfigByVersion = async () => {
   let config = 'plugin:vue/recommended';
   try {
-    const { version } = await import('vue');
+    const { version } = (await import('vue')) || {};
     const majorVersion = Number(version.split('.')[0]);
     if (majorVersion === 3) {
       config = 'plugin:vue/vue3-recommended';

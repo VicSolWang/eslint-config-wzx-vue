@@ -5,6 +5,9 @@
  */
 
 export default {
-  '**/*.{vue,js,ts}': ['prettier --write --list-different', 'eslint --fix'],
+  '**/*.{vue,js,ts}': [
+    'prettier --write --list-different',
+    'eslint --no-error-on-unmatched-pattern --fix',
+  ],
   '**/*.json': ['prettier --write --list-different'],
 };
