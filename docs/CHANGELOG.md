@@ -1,3 +1,12 @@
+## [0.6.1](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.6.0...v0.6.1) (2023-11-21)
+
+
+### Bug Fixes
+
+* optimize the acquisition of Vue version ([79d73f8](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/79d73f8f8d4e30728cb91ef105a600a332ceb98a))
+* run eslint cli add option ([da72b81](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/da72b814a159750545642e03bee0152c8d619d51))
+* update package.json ([a9bdef9](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/a9bdef962ed029736a4148737911effcd6a35ea0))
+
 # [0.6.0](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.5.1...v0.6.0) (2023-11-19)
 
 
