@@ -1,3 +1,10 @@
+## [0.6.4](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.6.3...v0.6.4) (2023-12-05)
+
+
+### Bug Fixes
+
+* update package.json ([e2dcc6c](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/e2dcc6c61b2a913b0153b52567754296630dd67b))
+
 ## [0.6.3](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.6.2...v0.6.3) (2023-12-03)
 
 
