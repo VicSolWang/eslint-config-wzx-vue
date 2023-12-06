@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.6.4...v0.7.0) (2023-12-06)
+
+
+### Features
+
+* update rules ([1c96a75](https://github.com/VicSolWang/eslint-config-wzx-vue/commit/1c96a75664c5d4ffa27d3ca317d0d6f545614f0a))
+
 ## [0.6.4](https://github.com/VicSolWang/eslint-config-wzx-vue/compare/v0.6.3...v0.6.4) (2023-12-05)
 
 
