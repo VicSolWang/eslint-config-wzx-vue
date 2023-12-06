@@ -119,6 +119,20 @@ const config = [
   {
     rules: {
       ...wzxCustomRules,
+      'import/extensions': [
+        'error',
+        {
+          ignorePackages: true,
+          pattern: {
+            js: 'never',
+            ts: 'never',
+            tsx: 'never',
+            mts: 'never',
+            cts: 'never',
+            vue: 'never',
+          },
+        },
+      ],
       'vue/multi-word-component-names': 'off',
       'vue/no-multiple-template-root': vueConfig.includes('vue3')
         ? 'off'
